@@ -1,4 +1,4 @@
-package com.rangstory.backend;
+package com.rangstory.rangstory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

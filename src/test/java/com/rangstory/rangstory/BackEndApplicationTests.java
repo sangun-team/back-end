@@ -1,4 +1,4 @@
-package com.rangstory.backend;
+package com.rangstory.rangstory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
