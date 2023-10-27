@@ -1,12 +1,10 @@
-package com.rangstory.rangstory.domain.artinfo.command.domain.aggregate.entity;
+package com.rangstory.rangstory.domain.artinfo.query.domain.aggregate.entity;
 
 import lombok.Getter;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "ARTINFO_TB")
-@Getter
+
 public class ArtInfo {
 
     @Id
