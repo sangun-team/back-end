@@ -19,16 +19,13 @@ public class FindArtInfoService {
         this.artInfoRepository = artInfoRepository;
     }
 
+
     @Transactional
-    public FindArtInfoDTO findArtInfoId(Long artId) {
-        ArtInfo artInfo = findByArtId(artId);
-
-        FindArtInfoDTO findArtIn
-    }
-
-    private ArtInfo findByArtId(Long artId) {
+    public FindArtInfoDTO findByArtId(Long artId) {
         Optional<ArtInfo> artInfo = artInfoRepository.findById(artId);
 
-        return artInfo.get();
+        FindArtInfoDTO findArtInfoDTO = FindArtInfoDTO.toEntity(artInfo.get());
+
+        return findArtInfoDTO;
     }
 }
