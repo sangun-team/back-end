@@ -4,7 +4,9 @@ import lombok.Getter;
 
 import javax.persistence.*;
 
-
+@Entity
+@Table(name = "ARTINFO_TB")
+@Getter
 public class ArtInfo {
 
     @Id
