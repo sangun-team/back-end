@@ -24,7 +24,7 @@ public class FindArtInfoController {
     @GetMapping("/{artId}")
     public ResponseEntity<FindArtInfoDTO> getArtInfoId(@PathVariable Long artId) {
 
-        FindArtInfoDTO findArtInfoDTO = findArtInfoService.findArtInfoId(artId);
+        FindArtInfoDTO findArtInfoDTO = findArtInfoService.findByArtId(artId);
 
         return ResponseEntity.ok().body(findArtInfoDTO);
     }
