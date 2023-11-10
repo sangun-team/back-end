@@ -13,6 +13,9 @@ public class ArtInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(columnDefinition = "TEXT", nullable = false, name = "art_name")
+    private String artName;
+
     @Column(columnDefinition = "TEXT", nullable = false, name = "painter_name")
     private String painterName;
 
@@ -24,10 +27,15 @@ public class ArtInfo {
 
     protected ArtInfo() {}
 
-    public ArtInfo(String painterName, String artYear, String content) {
+    public ArtInfo(String artName, String painterName, String artYear, String content) {
+        this.artName = artName;
         this.painterName = painterName;
         this.artYear = artYear;
         this.content = content;
+    }
+
+    public void setArtName(String artName) {
+        this.artName = artName;
     }
 
     public ArtInfo setPainterName(String painterName) {
